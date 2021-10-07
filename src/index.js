@@ -30,6 +30,12 @@ function fetchContacts() {
         setTimeout(function () { return resolve(contacts); }, 2000);
     });
 }
+var PhoneType;
+(function (PhoneType) {
+    PhoneType["Home"] = "home";
+    PhoneType["Office"] = "office";
+    PhoneType["Studio"] = "studio";
+})(PhoneType || (PhoneType = {}));
 // main
 var AddressBook = /** @class */ (function () {
     function AddressBook() {
